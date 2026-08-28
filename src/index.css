@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #0A0A0B;     /* Deep Obsidian Black */
+  --color-bg-secondary: #121214;   /* Dark Charcoal for cards/timeline */
+  --color-bg-tertiary: #1C1C1F;    /* Lighter Charcoal for borders/hovers */
+  --color-text-primary: #F8F9FA;   /* Off-White Typography */
+  --color-text-secondary: #A3A3A3; /* Muted Silver-Grey */
+  --color-text-muted: #737373;     /* Muted Grey for captions */
+  --color-accent: #E5C158;         /* Premium Champagne Gold */
+  --color-accent-dark: #C5A84D;    /* Deep Gold */
+  --color-accent-light: #F3E0A5;   /* Light Gold/Cream */
+  --color-border-light: rgba(248, 249, 250, 0.07);
+  --color-border-dark: rgba(248, 249, 250, 0.15);
+  
+  --font-serif: 'Roboto Slab', Georgia, serif;
+  --font-sans: 'Roboto', system-ui, sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar styled for dark editorial look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-tertiary);
+  border-radius: 4px;
+  border: 2px solid var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Base custom classes */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Paper Grain Texture (Darkened for better dark mode blend) */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Editorial styling details */
+.editorial-border {
+  border: 1px solid var(--color-border-light);
+}
+
+.editorial-card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-light);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: rgba(229, 193, 88, 0.35);
+  background-color: #161619;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.editorial-nav {
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Elegant Text Underlines */
+.text-underline-reveal {
+  position: relative;
+}
+.text-underline-reveal::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-accent);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.text-underline-reveal:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
