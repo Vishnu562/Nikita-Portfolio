@@ -30,11 +30,11 @@ export const FloatingHireMe: React.FC = () => {
         >
           <a
             href="#contact"
-            className="flex items-center gap-2 px-5 py-3.5 bg-[#121212] text-[#FAF6EE] font-bold text-xs uppercase tracking-widest hover:bg-[#8C6C53] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95 shadow-lg border border-[#FAF6EE]/15 font-sans"
+            className="flex items-center gap-2 px-5 py-3.5 bg-bg-secondary text-text-primary font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95 shadow-lg border border-border-light font-sans"
           >
             <MessageSquare size={13} />
             <span>Collab</span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#FAF6EE] group-hover:scale-125 transition-transform" />
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-text-primary group-hover:scale-125 transition-transform" />
           </a>
         </motion.div>
       )}

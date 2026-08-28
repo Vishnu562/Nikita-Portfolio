@@ -56,7 +56,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ value }) => {
   }, [value, isInView]);
 
   return (
-    <h3 ref={ref} className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#121212] tracking-tight mb-2">
+    <h3 ref={ref} className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-text-primary tracking-tight mb-2">
       {displayValue}
     </h3>
   );

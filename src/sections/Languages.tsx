@@ -8,7 +8,7 @@ export const Languages: React.FC = () => {
     <section className="py-12 bg-bg-secondary/20 border-t border-b border-border-light select-none">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 md:gap-16">
-          <span className="text-[9px] font-bold tracking-[0.25em] text-[#8C6C53] uppercase font-sans">
+          <span className="text-[9px] font-bold tracking-[0.25em] text-accent uppercase font-sans">
             Broadcast Languages
           </span>
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-12">
@@ -21,7 +21,7 @@ export const Languages: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex items-center gap-2.5"
               >
-                <span className="w-1.5 h-1.5 bg-[#8C6C53]" />
+                <span className="w-1.5 h-1.5 bg-accent" />
               <span className="font-serif font-bold text-sm sm:text-base tracking-[0.2em] text-text-primary">
                   {lang}
                 </span>

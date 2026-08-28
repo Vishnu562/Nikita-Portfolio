@@ -32,7 +32,7 @@ export const Education: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="p-6 border border-[#121212]/8 bg-[#F4EFE3]/35 flex flex-col justify-between hover:bg-[#F4EFE3]/70 hover:border-[#8C6C53]/35 transition-all duration-300 relative group min-h-[170px]"
+              className="p-6 border border-border-light bg-bg-secondary/35 flex flex-col justify-between hover:bg-bg-secondary/70 hover:border-accent/35 transition-all duration-300 relative group min-h-[170px]"
             >
               <div>
                 <div className="flex justify-between items-center mb-4">
@@ -48,12 +48,12 @@ export const Education: React.FC = () => {
                   {item.degree}
                 </h3>
                 
-                <p className="text-xs text-[#4E4E4E] font-sans font-medium mb-3">
+                <p className="text-xs text-text-secondary font-sans font-medium mb-3">
                   {item.school}
                 </p>
               </div>
 
-              <div className="flex items-center gap-1 text-[9px] tracking-wider uppercase text-[#7A7A7A] font-sans font-bold border-t border-[#121212]/5 pt-3">
+              <div className="flex items-center gap-1 text-[9px] tracking-wider uppercase text-text-muted font-sans font-bold border-t border-border-light pt-3">
                 <span>{item.location}</span>
               </div>
             </motion.div>

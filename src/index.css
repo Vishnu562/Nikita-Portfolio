@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #0A0A0B;     /* Deep Obsidian Black */
-  --color-bg-secondary: #121214;   /* Dark Charcoal for cards/timeline */
-  --color-bg-tertiary: #1C1C1F;    /* Lighter Charcoal for borders/hovers */
-  --color-text-primary: #F8F9FA;   /* Off-White Typography */
-  --color-text-secondary: #A3A3A3; /* Muted Silver-Grey */
-  --color-text-muted: #737373;     /* Muted Grey for captions */
-  --color-accent: #E5C158;         /* Premium Champagne Gold */
-  --color-accent-dark: #C5A84D;    /* Deep Gold */
-  --color-accent-light: #F3E0A5;   /* Light Gold/Cream */
+  --color-bg-primary: #090708;     /* Near-black page background */
+  --color-bg-secondary: #171014;   /* Dark pink-black cards */
+  --color-bg-tertiary: #281722;    /* Raised dark pink surfaces */
+  --color-text-primary: #FFFFFF;   /* White primary typography */
+  --color-text-secondary: #F0DCE3; /* Soft pink-white body copy */
+  --color-text-muted: #B99AA6;     /* Muted pink-grey captions */
+  --color-accent: #D94672;         /* Dark pink accent */
+  --color-accent-dark: #A62C55;    /* Deep pink */
+  --color-accent-light: #F47298;   /* Light pink */
   --color-border-light: rgba(248, 249, 250, 0.07);
   --color-border-dark: rgba(248, 249, 250, 0.15);
   

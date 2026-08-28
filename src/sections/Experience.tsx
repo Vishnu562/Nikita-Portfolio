@@ -23,7 +23,7 @@ export const Experience: React.FC = () => {
       </div>
 
       {/* Timeline Wrapper */}
-      <div className="relative border-l border-[#121212]/10 ml-4 md:ml-12 pl-6 md:pl-12 space-y-16">
+      <div className="relative border-l border-border-light ml-4 md:ml-12 pl-6 md:pl-12 space-y-16">
         {EXPERIENCE.map((job, index) => (
           <motion.div
             key={index}
@@ -34,15 +34,15 @@ export const Experience: React.FC = () => {
             className="relative"
           >
             {/* Dot on the timeline */}
-            <span className="absolute -left-[31px] md:-left-[55px] top-1.5 w-4 h-4 rounded-full bg-[#FAF6EE] border-2 border-[#8C6C53] flex items-center justify-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8C6C53]" />
+            <span className="absolute -left-[31px] md:-left-[55px] top-1.5 w-4 h-4 rounded-full bg-bg-primary border-2 border-accent flex items-center justify-center">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             </span>
 
             {/* Content Box */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
               {/* Left Column: Job Details */}
               <div className="lg:col-span-4 text-left">
-                <span className="inline-block text-[10px] font-bold tracking-widest bg-[#8C6C53]/15 text-[#8C6C53] px-2 py-1 uppercase rounded mb-2 font-sans">
+                <span className="inline-block text-[10px] font-bold tracking-widest bg-accent/15 text-accent px-2 py-1 uppercase rounded mb-2 font-sans">
                   {job.period}
                 </span>
                 
@@ -54,7 +54,7 @@ export const Experience: React.FC = () => {
                   {job.role}
                 </p>
 
-                <div className="flex items-center gap-1.5 text-xs text-[#7A7A7A] mt-3 font-sans">
+                <div className="flex items-center gap-1.5 text-xs text-text-muted mt-3 font-sans">
                   <MapPin size={12} />
                   <span>{job.location}</span>
                 </div>
@@ -72,7 +72,7 @@ export const Experience: React.FC = () => {
                   Key Responsibilities
                 </h4>
                 
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6 text-xs text-[#4E4E4E] leading-relaxed list-inside list-disc font-light">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6 text-xs text-text-secondary leading-relaxed list-inside list-disc font-light">
                   {job.responsibilities.map((resp, idx) => (
                     <li key={idx} className="font-sans">
                       {resp}
@@ -89,7 +89,7 @@ export const Experience: React.FC = () => {
                       {job.contentAreas.map((area, idx) => (
                         <span
                           key={idx}
-                          className="text-[9px] font-bold tracking-widest text-[#4E4E4E] bg-[#EBE5D6] px-2.5 py-1 uppercase"
+                          className="text-[9px] font-bold tracking-widest text-text-secondary bg-bg-tertiary px-2.5 py-1 uppercase"
                         >
                           {area}
                         </span>

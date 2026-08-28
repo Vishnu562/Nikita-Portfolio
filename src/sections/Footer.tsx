@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
                 key={idx}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="text-[#4E4E4E] hover:text-[#8C6C53] transition-colors duration-300"
+                className="text-text-secondary hover:text-accent transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
           {/* Back to Top */}
           <button
             onClick={handleScrollToTop}
-            className="p-3 border border-[#121212]/10 hover:border-[#121212] text-[#4E4E4E] hover:text-[#121212] bg-[#F4EFE3]/20 hover:bg-[#F4EFE3] hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
+            className="p-3 border border-border-light hover:border-accent text-text-secondary hover:text-text-primary bg-bg-secondary/20 hover:bg-bg-secondary hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm"
             aria-label="Back to top"
           >
             <ArrowUp size={14} />
@@ -77,12 +77,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Divider */}
-        <div className="h-[1px] bg-[#121212]/5 w-full mb-8" />
+        <div className="h-[1px] bg-border-light w-full mb-8" />
 
         {/* Bottom Segment */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           {/* Copyright */}
-          <p className="text-[10px] text-[#7A7A7A] uppercase tracking-wider font-semibold font-sans">
+          <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold font-sans">
             © {currentYear} {PERSONAL_INFO.name}. All rights reserved.
           </p>
 

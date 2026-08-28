@@ -84,7 +84,7 @@ export const Contact: React.FC = () => {
   ];
 
   const socials = [
-    { name: 'Youtube-Bosswallah Marathi', icon: Youtube, href: PERSONAL_INFO.contact.socials.youtube, color: 'hover:text-[#8C6C53]' }
+    { name: 'Youtube-Bosswallah Marathi', icon: Youtube, href: PERSONAL_INFO.contact.socials.youtube, color: 'hover:text-accent' }
   ];
 
   return (
@@ -129,16 +129,16 @@ export const Contact: React.FC = () => {
                     href={info.href}
                     target={info.label === 'Location' ? '_blank' : undefined}
                     rel={info.label === 'Location' ? 'noopener noreferrer' : undefined}
-                    className="flex items-center gap-4 group p-4 border border-[#121212]/5 bg-[#F4EFE3]/20 hover:bg-[#F4EFE3]/60 transition-colors duration-300"
+                    className="flex items-center gap-4 group p-4 border border-border-light bg-bg-secondary/20 hover:bg-bg-secondary/60 transition-colors duration-300"
                   >
-                    <div className="p-2.5 bg-[#8C6C53]/5 text-[#8C6C53] border border-[#8C6C53]/10">
+                    <div className="p-2.5 bg-accent/5 text-accent border border-accent/10">
                       <Icon size={16} />
                     </div>
                     <div>
-                      <span className="text-[9px] text-[#7A7A7A] font-bold block uppercase tracking-wider mb-0.5 font-sans">
+                      <span className="text-[9px] text-text-muted font-bold block uppercase tracking-wider mb-0.5 font-sans">
                         {info.label}
                       </span>
-                      <span className="text-xs sm:text-sm font-semibold text-[#121212] group-hover:text-[#8C6C53] transition-colors font-sans">
+                      <span className="text-xs sm:text-sm font-semibold text-text-primary group-hover:text-accent transition-colors font-sans">
                         {info.value}
                       </span>
                     </div>
@@ -150,7 +150,7 @@ export const Contact: React.FC = () => {
 
           {/* Social Icons Strip */}
           <div className="mt-12 lg:mt-6">
-            <h4 className="text-[9px] font-bold uppercase tracking-widest text-[#7A7A7A] mb-4 font-sans">
+            <h4 className="text-[9px] font-bold uppercase tracking-widest text-text-muted mb-4 font-sans">
               Follow My Work
             </h4>
             <div className="flex gap-4">
@@ -184,7 +184,7 @@ export const Contact: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="text-[10px] font-bold text-[#7A7A7A] block mb-2 uppercase tracking-wide font-sans">
+                <label htmlFor="name" className="text-[10px] font-bold text-text-muted block mb-2 uppercase tracking-wide font-sans">
                   Full Name
                 </label>
                 <input
@@ -193,9 +193,9 @@ export const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-[#FAF6EE] border ${
-                    errors.name ? 'border-red-500/50 focus:border-red-500' : 'border-[#121212]/10 focus:border-[#8C6C53]'
-                  } text-[#121212] focus:outline-none transition-colors text-xs font-sans`}
+                  className={`w-full px-4 py-3 bg-bg-tertiary border ${
+                    errors.name ? 'border-red-500/50 focus:border-red-500' : 'border-border-light focus:border-accent'
+                  } text-text-primary focus:outline-none transition-colors text-xs font-sans`}
                   placeholder="Enter your name"
                 />
                 {errors.name && (
@@ -208,7 +208,7 @@ export const Contact: React.FC = () => {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="text-[10px] font-bold text-[#7A7A7A] block mb-2 uppercase tracking-wide font-sans">
+                <label htmlFor="email" className="text-[10px] font-bold text-text-muted block mb-2 uppercase tracking-wide font-sans">
                   Email Address
                 </label>
                 <input
@@ -217,9 +217,9 @@ export const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-[#FAF6EE] border ${
-                    errors.email ? 'border-red-500/50 focus:border-red-500' : 'border-[#121212]/10 focus:border-[#8C6C53]'
-                  } text-[#121212] focus:outline-none transition-colors text-xs font-sans`}
+                  className={`w-full px-4 py-3 bg-bg-tertiary border ${
+                    errors.email ? 'border-red-500/50 focus:border-red-500' : 'border-border-light focus:border-accent'
+                  } text-text-primary focus:outline-none transition-colors text-xs font-sans`}
                   placeholder="Enter your email"
                 />
                 {errors.email && (
@@ -233,7 +233,7 @@ export const Contact: React.FC = () => {
 
             {/* Subject */}
             <div>
-              <label htmlFor="subject" className="text-[10px] font-bold text-[#7A7A7A] block mb-2 uppercase tracking-wide font-sans">
+              <label htmlFor="subject" className="text-[10px] font-bold text-text-muted block mb-2 uppercase tracking-wide font-sans">
                 Subject / Campaign Type
               </label>
               <input
@@ -242,9 +242,9 @@ export const Contact: React.FC = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className={`w-full px-4 py-3 bg-[#FAF6EE] border ${
-                  errors.subject ? 'border-red-500/50 focus:border-red-500' : 'border-[#121212]/10 focus:border-[#8C6C53]'
-                } text-[#121212] focus:outline-none transition-colors text-xs font-sans`}
+                className={`w-full px-4 py-3 bg-bg-tertiary border ${
+                  errors.subject ? 'border-red-500/50 focus:border-red-500' : 'border-border-light focus:border-accent'
+                } text-text-primary focus:outline-none transition-colors text-xs font-sans`}
                 placeholder="e.g. Brand Sponsorship, UGC Video, Host Role"
               />
               {errors.subject && (
@@ -257,7 +257,7 @@ export const Contact: React.FC = () => {
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="text-[10px] font-bold text-[#7A7A7A] block mb-2 uppercase tracking-wide font-sans">
+              <label htmlFor="message" className="text-[10px] font-bold text-text-muted block mb-2 uppercase tracking-wide font-sans">
                 Campaign / Project Scope
               </label>
               <textarea
@@ -266,9 +266,9 @@ export const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={5}
-                className={`w-full px-4 py-3 bg-[#FAF6EE] border ${
-                  errors.message ? 'border-red-500/50 focus:border-red-500' : 'border-[#121212]/10 focus:border-[#8C6C53]'
-                } text-[#121212] focus:outline-none transition-colors text-xs font-sans resize-none`}
+                className={`w-full px-4 py-3 bg-bg-tertiary border ${
+                  errors.message ? 'border-red-500/50 focus:border-red-500' : 'border-border-light focus:border-accent'
+                } text-text-primary focus:outline-none transition-colors text-xs font-sans resize-none`}
                 placeholder="Briefly describe what content we'll be collaborating on..."
               />
               {errors.message && (
@@ -283,7 +283,7 @@ export const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4 bg-[#121212] text-[#FAF6EE] hover:bg-[#8C6C53] font-bold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-[1.005] active:scale-[0.99] flex items-center justify-center gap-2 font-sans border border-[#FAF6EE]/10"
+              className="w-full py-4 bg-accent text-white hover:bg-accent-dark font-bold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-[1.005] active:scale-[0.99] flex items-center justify-center gap-2 font-sans border border-accent-light/10"
             >
               {isSubmitting ? (
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -303,15 +303,15 @@ export const Contact: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
-                className="absolute inset-0 bg-[#FAF6EE] border border-[#8C6C53] flex flex-col items-center justify-center p-8 z-20 text-center"
+                className="absolute inset-0 bg-bg-secondary border border-accent flex flex-col items-center justify-center p-8 z-20 text-center"
               >
-                <div className="p-3 bg-[#8C6C53]/10 text-[#8C6C53] mb-4 border border-[#8C6C53]/20">
+                <div className="p-3 bg-accent/10 text-accent mb-4 border border-accent/20">
                   <CheckCircle size={24} />
                 </div>
-                <h3 className="text-xl font-bold font-serif text-[#121212] mb-2">
+                <h3 className="text-xl font-bold font-serif text-text-primary mb-2">
                   Message Sent Successfully!
                 </h3>
-                <p className="text-[#4E4E4E] text-xs max-w-xs font-light leading-relaxed font-sans">
+                <p className="text-text-secondary text-xs max-w-xs font-light leading-relaxed font-sans">
                   Thank you for reaching out. Nikita will review your inquiry and get back to you shortly.
                 </p>
               </motion.div>

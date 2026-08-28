@@ -19,7 +19,7 @@ export const Brands: React.FC = () => {
       </div>
 
       {/* Monochrome Text Logo Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 border border-[#121212]/10 divide-x divide-y divide-[#121212]/10 bg-[#F4EFE3]/20">
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 border border-border-light divide-x divide-y divide-border-light bg-bg-secondary/20">
         {BRANDS.map((brand, index) => (
           <motion.div
             key={index}
@@ -27,7 +27,7 @@ export const Brands: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
-            className="flex items-center justify-center py-8 px-4 text-center group hover:bg-[#FAF6EE] transition-colors duration-300 min-h-[90px]"
+            className="flex items-center justify-center py-8 px-4 text-center group hover:bg-bg-secondary transition-colors duration-300 min-h-[90px]"
           >
             <span className="font-serif font-extrabold text-base tracking-[0.15em] text-text-muted uppercase group-hover:text-text-primary transition-colors duration-300">
               {brand}
