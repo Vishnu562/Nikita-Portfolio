@@ -7,6 +7,12 @@ export interface VideoItem {
   thumbnailUrl: string;
 }
 
+export interface BrandVideoItem {
+  fileName: string;
+  title: string;
+  brand: string;
+}
+
 export interface ExperienceItem {
   company: string;
   role: string;
@@ -240,13 +246,38 @@ export const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export const BRANDS = [
-  "Axis",
-  "Max Life",
-  "AlertPay",
-  "Storystream",
+  "Axis Max Life",
   "MasterApp",
   "Univest",
   "Superliving"
+];
+
+export const BRAND_VIDEOS: BrandVideoItem[] = [
+  ...Array.from({ length: 6 }, (_, index) => ({
+    fileName: `Axis Max ${index + 1}.mp4`,
+    title: `Axis Max Life ${index + 1}`,
+    brand: "Axis Max Life"
+  })),
+  {
+    fileName: "Masterapp.mp4",
+    title: "Masterapp",
+    brand: "MasterApp"
+  },
+  {
+    fileName: "Superliving.mp4",
+    title: "Superliving",
+    brand: "Superliving"
+  },
+  {
+    fileName: "UNIVEST 2.mp4",
+    title: "Univest 2",
+    brand: "Univest"
+  },
+  {
+    fileName: "UNIVEST.mp4",
+    title: "Univest",
+    brand: "Univest"
+  }
 ];
 
 export const EDUCATION: EducationItem[] = [
